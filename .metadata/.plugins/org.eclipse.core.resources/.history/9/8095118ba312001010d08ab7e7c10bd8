@@ -1,0 +1,16 @@
+package oops.variable;
+
+public class local_instance_variable {
+int a;
+int b;
+
+int area() {
+	int a = 5;
+	int b= 6;
+	return a*b;
+}
+
+public static void main(String[] args) {
+	System.out.println("Area: " +area());
+}
+}

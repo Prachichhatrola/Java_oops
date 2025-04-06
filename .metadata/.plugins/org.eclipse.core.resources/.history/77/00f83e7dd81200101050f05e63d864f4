@@ -1,0 +1,29 @@
+package oops.inheritance;
+
+interface A1 {
+    void methodA();
+}
+
+interface B1 {
+    void methodB1();
+}
+
+class C1 implements A1 {
+    void methodA1() {
+        System.out.println("From Interface A");
+    }
+}
+
+class D1 extends C1 implements B1 {
+    public void methodB1() {
+        System.out.println("From Interface B");
+    }
+}
+
+public class hybridInheritance {
+    public static void main(String[] args) {
+        D1 obj = new D1();
+        obj.methodA1();
+        obj.methodB1();
+    }
+}

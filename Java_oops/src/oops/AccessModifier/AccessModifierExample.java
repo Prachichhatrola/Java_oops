@@ -1,0 +1,50 @@
+package oops.AccessModifier;
+
+//File: AccessModifierExample.java
+
+class Person {
+
+	private String name = "Prachi"; // Private variable
+	int age = 22; // Default access
+	protected String city = "Bhavnagar"; // Protected variable
+	public String country = "India"; // Public variable
+
+	private void showName() {
+		System.out.println("Private Name: " + name);
+	}
+
+	void showAge() {
+		System.out.println("Default Age: " + age);
+	}
+
+	protected void showCity() {
+		System.out.println("Protected City: " + city);
+	}
+
+	public void showCountry() {
+		System.out.println("Public Country: " + country);
+	}
+
+	public void accessPrivateMethod() {
+		// Accessing private method within the same class
+		showName();
+	}
+}
+
+public class AccessModifierExample {
+	public static void main(String[] args) {
+		Person p = new Person();
+
+		// p.showName(); // Error: private method not accessible
+		p.accessPrivateMethod(); // Indirectly accessing private method
+
+		p.showAge(); // Default
+		p.showCity(); // Protected
+		p.showCountry(); // Public
+	}
+}
+
+// private → accessible within the same class only
+// default (no keyword) → accessible within the same package
+// protected → accessible within the same package and in subclasses
+// public → accessible from anywhere

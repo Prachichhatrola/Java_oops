@@ -1,0 +1,22 @@
+package oops.Final;
+
+class X {
+	final void m1() {
+		System.out.println("This is a final method.");
+	}
+}
+
+class Y extends X {
+	/*
+	void m1() {
+		// Compile-error! We can not override
+		System.out.println("Illegal!");
+	}
+	*/
+}
+
+public class finalMethod {
+	public static void main(String[] args) {
+		
+	}
+}

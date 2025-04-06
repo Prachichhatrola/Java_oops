@@ -1,0 +1,15 @@
+package oops.Static;
+
+public class staticMethod {
+
+    // Static method
+    static int square(int number) {
+        return number * number;
+    }
+
+    public static void main(String[] args) {
+        // Calling static method without creating object
+        int result = staticMEthod.square(5);
+        System.out.println("Square of 5 is: " + result);
+    }
+}

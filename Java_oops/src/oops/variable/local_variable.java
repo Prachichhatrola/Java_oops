@@ -1,0 +1,27 @@
+package oops.variable;
+
+public class local_variable {
+
+	public void calculateSum() {
+		// Local variables declared inside the method
+		int num1 = 10;
+		int num2 = 20;
+
+		// Another local variable to store the result
+		int sum = num1 + num2;
+
+		// Print the result
+		System.out.println("The sum of " + num1 + " and " + num2 + " is: " + sum);
+	}
+
+	public static void main(String[] args) {
+		local_variable example = new local_variable();
+		example.calculateSum();
+
+		// You cannot access local variables outside their scope
+		// The scope of num1 and num2 is limited to the method
+		// following lines will cause a compilation error
+		// System.out.println("Trying to access num1: " + num1);
+		// System.out.println("Trying to access num2: " + num2);
+	}
+}

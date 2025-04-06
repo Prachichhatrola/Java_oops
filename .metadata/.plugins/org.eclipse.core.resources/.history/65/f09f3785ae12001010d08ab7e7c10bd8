@@ -1,0 +1,31 @@
+package oops.constructor;
+
+public class constructorOverloading {
+	String language;
+
+	// constructor with no parameter
+	constructorOverloading() {
+	    this.language = "Java";
+	  }
+
+	// constructor with a single parameter
+	constructorOverloading(String language) {
+	    this.language = language;
+	  }
+
+	public void getName() {
+		System.out.println("Programming Language: " + this.language);
+	}
+
+	public static void main(String[] args) {
+
+		// call constructor with no parameter
+		constructorOverloading obj1 = new constructorOverloading();
+
+		// call constructor with a single parameter
+		constructorOverloading obj2 = new constructorOverloading("Python");
+
+		obj1.getName();
+		obj2.getName();
+	}
+}

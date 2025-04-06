@@ -1,0 +1,20 @@
+package oops.Final;
+
+//final class
+final class A {
+
+}
+
+/* this gives compile error */
+
+//class B extends A{
+//	
+//}
+
+public class finalClass{
+	public static void main(String[] args) {
+		
+	}
+}
+
+

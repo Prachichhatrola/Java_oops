@@ -1,0 +1,28 @@
+package oops.inheritance;
+
+class Grandparent {
+	void grand() {
+		System.out.println("This is Grandparent class");
+	}
+}
+
+class Parent extends Grandparent {
+	void parent() {
+		System.out.println("This is Parent class");
+	}
+}
+
+class Child extends Parent {
+	void child() {
+		System.out.println("This is Child class");
+	}
+}
+
+public class multilevelInheritance {
+	public static void main(String[] args) {
+		Child obj = new Child();
+		obj.grand();
+		obj.parent();
+		obj.child();
+	}
+}

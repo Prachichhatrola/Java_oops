@@ -1,0 +1,20 @@
+package Generic;
+
+interface Printer<T> {
+	void print(T value);
+}
+
+class StringPrinter implements Printer<String> {
+	public void print(String value) {
+		System.out.println("Printing: " + value);
+	}
+}
+
+public class GenericInterface {
+	public static void main(String[] args) {
+		Printer<String> p = new StringPrinter();
+		p.print("Hello Generics"); // Output: Printing: Hello Generics
+	}
+}
+
+//Defines a generic interface and implements it with a specific type.

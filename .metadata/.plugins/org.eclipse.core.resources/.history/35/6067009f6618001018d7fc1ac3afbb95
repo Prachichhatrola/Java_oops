@@ -1,0 +1,28 @@
+package oops.Association;
+
+//Engine class (tightly bound to Car)
+class Engine {
+	Engine() {
+		System.out.println("Engine is ready");
+	}
+}
+
+//Car has-a Engine (composition)
+class Car {
+	Engine engine;
+
+	Car() {
+		engine = new Engine(); // Created within Car
+	}
+
+	void startCar() {
+		System.out.println("Car is ready to go!");
+	}
+}
+
+public class Composition {
+	public static void main(String[] args) {
+		Car car = new Car(); // Engine is created automatically
+		car.startCar(); // Output: Engine is ready \n Car is ready to go!
+	}
+}

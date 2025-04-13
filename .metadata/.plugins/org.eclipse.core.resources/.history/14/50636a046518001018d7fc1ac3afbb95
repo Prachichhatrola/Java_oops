@@ -1,0 +1,14 @@
+package Generic;
+
+class Printer {
+	<T> Printer(T value) {
+		System.out.println("Value: " + value);
+	}
+}
+
+public class GenericConstructor {
+	public static void main(String[] args) {
+		Printer p1 = new Printer(123); // Output: Value: 123
+		Printer p2 = new Printer("Generic"); // Output: Value: Generic
+	}
+}

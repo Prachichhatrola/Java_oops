@@ -1,0 +1,17 @@
+package Collection.Map;
+
+import java.util.TreeMap;
+
+public class treeMap {
+	public static void main(String[] args) {
+		TreeMap<String, Integer> map = new TreeMap<>();
+		map.put("Zebra", 4);
+		map.put("Apple", 5);
+		map.put("Monkey", 3);
+
+		System.out.println("TreeMap (Sorted): " + map);
+
+		map.remove("Apple");
+		System.out.println("After removal: " + map);
+	}
+}

@@ -1,0 +1,40 @@
+package LambdaFunction;
+
+//Functional Interface with a single abstract method
+@FunctionalInterface
+interface Calculator {
+	int operate(int a, int b); // abstract method to perform an operation
+}
+
+public class LambdaFunction {
+	public static void main(String[] args) {
+
+		// Lambda expression to add two numbers (Single-line body)
+		Calculator add = (a, b) -> a + b;
+		System.out.println("Addition: " + add.operate(10, 5)); // Output: 15
+
+		// Lambda expression to subtract two numbers
+		Calculator subtract = (a, b) -> a - b;
+		System.out.println("Subtraction: " + subtract.operate(10, 5)); // Output: 5
+
+		// Lambda with block body and return keyword
+		Calculator multiply = (a, b) -> {
+			return a * b;
+		};
+		System.out.println("Multiplication: " + multiply.operate(10, 5)); // Output: 50
+
+		// Lambda with block body and multiple statements
+		Calculator divide = (a, b) -> {
+			if (b == 0) {
+				System.out.println("Cannot divide by zero");
+				return 0;
+			} else {
+				return a / b;
+			}
+		};
+		System.out.println("Division: " + divide.operate(10, 2)); // Output: 5
+		System.out.println("Division by zero: " + divide.operate(10, 0)); // Output: 0
+	}
+}
+
+//Lambda Expression allows writing short, clean code for functional interfaces, commonly used in streams, sorting, threads, etc.

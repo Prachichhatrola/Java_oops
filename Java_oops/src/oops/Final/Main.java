@@ -1,0 +1,24 @@
+package oops.Final;
+
+class Product {
+	String name;
+}
+
+public class Main {
+	public static void main(String[] args) {
+		final Product p = new Product(); // final object
+		p.name = "Laptop"; // allowed
+		System.out.println(p.name); // Output: Laptop
+
+		p.name = "Mouse"; // allowed
+		System.out.println(p.name); // Output: Mouse
+
+		// not allowed: reassigning final object reference
+		// p = new Product(); // This will give error
+	}
+}
+
+
+// For primitive types (int, double, etc.), final means value cannot change.
+// For object types, final means the reference can't point to another object 
+// — but the contents of the object can still be modified.

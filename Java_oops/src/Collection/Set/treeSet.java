@@ -1,0 +1,18 @@
+package Collection.Set;
+
+import java.util.TreeSet;
+
+public class treeSet {
+	public static void main(String[] args) {
+		TreeSet<Integer> set = new TreeSet<>();
+		set.add(3);
+		set.add(1);
+		set.add(2);
+
+		System.out.println("TreeSet (Sorted): " + set);
+		set.remove(2);
+		System.out.println("After removal: " + set);
+	}
+}
+
+//TreeSet stores elements in sorted order and does not allow duplicates.

@@ -1,0 +1,21 @@
+package Collection.List;
+
+import java.util.ArrayList;
+
+public class arrayList {
+	public static void main(String[] args) {
+		ArrayList<String> list = new ArrayList<>();
+		list.add("Apple");
+		list.add("Banana");
+		list.add("Cherry");
+
+		System.out.println("ArrayList: " + list);
+		list.remove("Banana");
+		System.out.println("After removal: " + list);
+
+		System.out.println("Contains Apple? " + list.contains("Apple"));
+		System.out.println("Size: " + list.size());
+	}
+}
+
+// List allows duplicate elements and maintains insertion order.

@@ -1,0 +1,20 @@
+package oops.ExceptionHandling;
+
+public class DivisionByZero {
+	public static void main(String[] args) {
+		// Integer division
+		try {
+			int a = 1 / 0; // ❌ ArithmeticException
+		} catch (ArithmeticException e) {
+			System.out.println("Integer division: " + e);
+		}
+
+		// Float division
+		float f = 1f / 0;
+		System.out.println("Float division: " + f); // ✅ Infinity
+
+		// Double division
+		double d = 1.0 / 0;
+		System.out.println("Double division: " + d); // ✅ Infinity
+	}
+}

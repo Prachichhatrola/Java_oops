@@ -1,0 +1,20 @@
+package Collection.Queue;
+
+import java.util.ArrayDeque;
+
+public class arrayDeque {
+	public static void main(String[] args) {
+		ArrayDeque<String> queue = new ArrayDeque<>();
+		queue.add("First");
+		queue.add("Second");
+		queue.add("Third");
+
+		System.out.println("ArrayDeque: " + queue);
+		System.out.println("First element: " + queue.peekFirst());
+
+		queue.remove();
+		System.out.println("After removal: " + queue);
+	}
+}
+
+//Queue follows FIFO (First In First Out) order for adding/removing elements.
